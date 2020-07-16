@@ -34,7 +34,7 @@
 		</div>
 		
 		<div>
-			<font color="red" > &nbsp &nbsp ${message}</span>
+			<font color="red" > &nbsp &nbsp ${message}</font>
 		</div>
 		
 		<br />
