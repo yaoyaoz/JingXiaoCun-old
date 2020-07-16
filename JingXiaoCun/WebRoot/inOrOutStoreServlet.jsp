@@ -37,7 +37,7 @@
 				<td>商品名称</td>
 				<td>
 					<input type="text" name="goods_name" value="${formBean.goods_name}" />
-					<font color="green">${formBean.errors.goods_name}</font>
+					<font color="red">${formBean.errors.goods_name}</font>
 				</td>
 			</tr>
 			<tr>
