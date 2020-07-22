@@ -138,10 +138,10 @@ public class GoodsDaoImpl implements GoodsDao {
 					+ "	) b" + "	on a.goods_name=b.goods_name" + "	and a.store_name=b.store_name where 1=1";
 
 			if (goodsStoreNum.getStore_name() != null && !goodsStoreNum.getStore_name().equals("")) {
-				sql = sql + " and a.store_name like '%" + goodsStoreNum.getStore_name() + "%' ";
+				sql = sql + " and a.store_name = '" + goodsStoreNum.getStore_name() + "' ";
 			}
 			if (goodsStoreNum.getGoods_name() != null && !goodsStoreNum.getGoods_name().equals("")) {
-				sql = sql + " and a.goods_name like '%" + goodsStoreNum.getGoods_name() + "%' ";
+				sql = sql + " and a.goods_name = '" + goodsStoreNum.getGoods_name() + "' ";
 			}
 
 			st = conn.prepareStatement(sql);
@@ -185,10 +185,10 @@ public class GoodsDaoImpl implements GoodsDao {
 				sql = sql + " and id = '" + goods.getId() + "'";
 			}
 			if (goods.getStore_name() != null && !goods.getStore_name().equals("")) {
-				sql = sql + " and store_name like '%" + goods.getStore_name() + "%' ";
+				sql = sql + " and store_name = '" + goods.getStore_name() + "' ";
 			}
 			if (goods.getGoods_name() != null && !goods.getGoods_name().equals("")) {
-				sql = sql + " and goods_name like '%" + goods.getGoods_name() + "%' ";
+				sql = sql + " and goods_name = '" + goods.getGoods_name() + "' ";
 			}
 			if (goods.getIn_or_out_type() != null && !goods.getIn_or_out_type().equals("")) {
 				sql = sql + " and in_or_out_type = '" + goods.getIn_or_out_type() + "' ";
